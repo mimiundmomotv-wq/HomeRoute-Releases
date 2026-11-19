@@ -1,81 +1,10 @@
 # Home Route – Downloads
 
-Fahre und laufe durch echte Orte, gebaut auf deinem PC aus offenen Kartendaten.
-*Drive and walk through real places, built on your PC from open map data.* → [English below](#english)
+Drive and walk through real places, built on your PC from open map data.
 
-**[➜ Neueste Version herunterladen / Download the latest version](https://github.com/mimiundmomotv-wq/HomeRoute-Releases/releases/latest)**
+**[➜ Download the latest version](https://github.com/mimiundmomotv-wq/HomeRoute-Releases/releases/latest)**
 
----
-
-## Deutsch: Installation Schritt für Schritt
-
-### Was du brauchst
-- Einen PC mit **Linux** (64 Bit). Windows und Mac gehen noch nicht.
-- Eine Grafikkarte mit aktuellem Treiber (Vulkan). Bei AMD- und Intel-Grafik ist das unter Ubuntu, Fedora usw. meist schon dabei. Bei NVIDIA: den NVIDIA-Treiber installieren (Ubuntu: *Anwendungen & Aktualisierungen → Zusätzliche Treiber*).
-- Mindestens 16 GB Arbeitsspeicher, etwa 1 GB freien Platz für das Spiel und einige GB pro selbst gebautem Gebiet.
-- Für **neue Gebiete**: Internet und eine aktuelle Linux-Version, z. B. **Ubuntu 24.04** oder neuer, Debian 13, Fedora 39 oder neuer. Auf älteren Versionen (z. B. Ubuntu 22.04, Linux Mint 21) startet das Spiel und das Startdorf läuft, aber neue Gebiete lassen sich noch nicht bauen.
-
-### 1. Herunterladen
-1. Öffne die Seite **[Neueste Version](https://github.com/mimiundmomotv-wq/HomeRoute-Releases/releases/latest)**.
-2. Scrolle nach unten zu **Assets**.
-3. Klicke auf **`HomeRoute-…-Linux-x86_64.tar.gz`** (die große Datei, einige hundert MB).
-   Die Einträge „Source code (zip)“ und „Source code (tar.gz)“ brauchst du **nicht**; GitHub hängt sie automatisch an, sie enthalten nur diese Anleitung.
-4. Die Datei landet normalerweise im Ordner **Downloads**.
-
-### 2. Entpacken
-1. Öffne den Ordner **Downloads** im Dateimanager.
-2. Rechtsklick auf die Datei `HomeRoute-…-Linux-x86_64.tar.gz` → **„Hier entpacken“** (oder „Entpacken“ / „Extract here“).
-3. Es entsteht ein Ordner `HomeRoute-…-Linux-x86_64`. Du kannst ihn verschieben, wohin du willst (z. B. in deinen Home-Ordner). Die `.tar.gz`-Datei kannst du danach löschen.
-
-### 3. Starten
-1. Öffne den entpackten Ordner.
-2. Doppelklick auf **`HomeRoute.sh`**.
-   - **KDE (Dolphin):** Falls gefragt wird, **„Ausführen“** wählen.
-   - **GNOME/Ubuntu (Dateien):** Öffnet sich stattdessen ein Texteditor, schließe ihn und mache einen Rechtsklick auf `HomeRoute.sh` → **„Als Programm ausführen“**.
-   - **Klappt das nicht**, nimm das Terminal: Rechtsklick in den Ordner → „Im Terminal öffnen“, dann eintippen und Enter drücken:
-     ```
-     ./HomeRoute.sh
-     ```
-3. Der erste Start dauert etwas länger (bis zu einer Minute), weil die Grafik vorbereitet wird. Danach geht es schneller.
-
-### 4. Spielen
-- **Erstes Mal:** „Choose area“ → „Starter Town“ → **„Drive“**. Das ist ein ausgedachtes Dorf, sofort spielbar.
-- **Deinen Ort bauen:** „New area“ → Ort oder Straße eintippen → „Search“ → Treffer anklicken → Größe wählen → **„Create area“**. Die Daten werden geladen und gebaut, das dauert je nach Größe einige Minuten. Am besten klappt es in **Nordrhein-Westfalen**, andere Bundesländer so weit es dort offene 3D-Gebäudedaten gibt.
-- **Ruckelt es?** Im Menü „Settings“ die Stufe **Low** wählen.
-
-**Tasten**
-
-| Taste | Was sie tut |
-|---|---|
-| W / S | Gas / Bremse (zu Fuß: vor / zurück) |
-| A / D | Lenken (zu Fuß: seitwärts) |
-| Leertaste | Handbremse (zu Fuß: springen) |
-| Maus | Umsehen |
-| F | Aussteigen / Einsteigen |
-| C | Auto zu dir rufen |
-| R | Auto zurücksetzen |
-| H | Zurück zum Start |
-| Tab | Karte: Ort anklicken oder Straße suchen, um dorthin zu springen |
-| V | Fliegen (F landet wieder zu Fuß) |
-| M | Stelle markieren, mit Kommentar (für Fehlermeldungen) |
-| Esc | Menü |
-
-### Wo liegen meine Daten? Deinstallieren
-- Selbst gebaute Gebiete und Einstellungen liegen in `~/.config/Epic/HomeRoute/` (versteckter Ordner im Home-Ordner; im Dateimanager mit **Strg+H** sichtbar machen).
-- **Deinstallieren:** den Ordner `HomeRoute-…-Linux-x86_64` löschen. Wer auch Gebiete und Einstellungen loswerden will, löscht zusätzlich `~/.config/Epic/HomeRoute/`.
-- **Neue Version:** einfach die neue Version herunterladen und entpacken; deine Gebiete bleiben erhalten.
-
-### Wenn etwas nicht klappt
-- **Startet nicht / schwarzes Bild:** Grafiktreiber aktualisieren (siehe „Was du brauchst“). Im Terminal starten (`./HomeRoute.sh`), dann siehst du eine Fehlermeldung.
-- **„Create area“ bricht sofort ab:** Linux-Version zu alt (siehe oben) oder keine Internetverbindung.
-- **Fehler melden:** Oben auf dieser Seite auf **Issues → New issue** klicken und beschreiben, was passiert ist (gern mit Bildschirmfoto). Bitte keine eigenen Adressen posten, wenn du das nicht möchtest.
-
-*Prüfsumme (für Fortgeschrittene, optional):* Lade auch die `.sha256`-Datei in denselben Ordner und tippe dort `sha256sum -c HomeRoute-*.tar.gz.sha256` – es muss „OK“ erscheinen.
-
----
-
-<a id="english"></a>
-## English: step-by-step installation
+## Installation, step by step
 
 ### What you need
 - A **Linux** PC (64-bit). Windows and Mac are not supported yet.
@@ -111,7 +40,22 @@ Fahre und laufe durch echte Orte, gebaut auf deinem PC aus offenen Kartendaten.
 - **Build your own place:** "New area" → type a town or street → "Search" → click a result → choose the size → **"Create area"**. The data is downloaded and built, which takes a few minutes depending on the size. Works best in **North Rhine-Westphalia** (Germany); other German states as far as they publish open 3D building data.
 - **Choppy?** Choose **Low** in "Settings".
 
-**Keys:** W/S drive and brake (on foot: forward/back), A/D steer, Space handbrake (on foot: jump), mouse look, F get out/in, C call the car, R reset the car, H back to start, Tab map (click a place or search a street to jump there), V fly (F lands on foot), M mark a spot with a comment, Esc menu.
+**Keys**
+
+| Key | What it does |
+|---|---|
+| W / S | Accelerate / brake (on foot: forward / back) |
+| A / D | Steer (on foot: sideways) |
+| Space | Handbrake (on foot: jump) |
+| Mouse | Look around |
+| F | Get out / get in |
+| C | Call the car to you |
+| R | Reset the car |
+| H | Back to the start |
+| Tab | Map: click a place or search a street to jump there |
+| V | Fly (F lands you on foot again) |
+| M | Mark a spot with a comment (for bug reports) |
+| Esc | Menu |
 
 ### Your data, uninstalling, updating
 - Your areas and settings are in `~/.config/Epic/HomeRoute/` (a hidden folder in your home folder; **Ctrl+H** shows hidden files).
