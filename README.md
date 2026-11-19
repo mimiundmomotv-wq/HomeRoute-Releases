@@ -7,10 +7,10 @@ Drive and walk through real places, built on your PC from open map data.
 ## Installation, step by step
 
 ### What you need
-- A **Linux** PC (64-bit). Windows and Mac are not supported yet.
+- A **Linux** PC (64-bit) with **Ubuntu 24.04** or newer, Debian 13, Fedora 39 or newer, or another current distribution. Windows and Mac are not supported yet.
 - A graphics card with a current driver (Vulkan). AMD and Intel graphics usually work out of the box on Ubuntu, Fedora etc. For NVIDIA, install the NVIDIA driver (Ubuntu: *Software & Updates → Additional Drivers*).
 - At least 16 GB of RAM, about 1 GB of free disk space for the game, plus a few GB for each area you build.
-- For **new areas**: an internet connection and a recent Linux, e.g. **Ubuntu 24.04** or newer, Debian 13, Fedora 39 or newer. On older ones (e.g. Ubuntu 22.04, Linux Mint 21) the game and the starter town work, but new areas can't be built yet.
+- An internet connection for building new areas.
 
 ### 1. Download
 1. Open the **[latest version](https://github.com/mimiundmomotv-wq/HomeRoute-Releases/releases/latest)** page.
@@ -64,7 +64,7 @@ Drive and walk through real places, built on your PC from open map data.
 
 ### If something goes wrong
 - **Doesn't start / black screen:** update your graphics driver; start it from a terminal (`./HomeRoute.sh`) to see the error.
-- **"Create area" stops right away:** Linux too old (see above) or no internet.
+- **"Create area" stops right away:** check your internet connection.
 - **Report a problem:** click **Issues → New issue** at the top of this page and describe what happened (a screenshot helps).
 
 *Checksum (optional):* put the `.sha256` file next to the archive and run `sha256sum -c HomeRoute-*.tar.gz.sha256`; it should print "OK".
