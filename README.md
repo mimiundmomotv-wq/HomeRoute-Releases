@@ -60,16 +60,58 @@ Drive and walk through real places, built on your PC from open map data.
 | Esc | Menu |
 
 ### Your data, uninstalling, updating
-- Your areas and settings are in `~/.config/Epic/HomeRoute/` (a hidden folder in your home folder; **Ctrl+H** shows hidden files).
+- Your areas, settings and marks are in `~/.config/Epic/HomeRoute/` (a hidden folder in your home folder; **Ctrl+H** shows hidden files).
 - **Uninstall:** delete the `HomeRoute-…-Linux-x86_64` folder, and `~/.config/Epic/HomeRoute/` too if you want your areas and settings gone.
 - **Update:** download and unpack the new version; your areas are kept.
 
 ### If something goes wrong
 - **Doesn't start / black screen:** update your graphics driver; start it from a terminal (`./HomeRoute.sh`) to see the error.
 - **"Create area" stops right away:** check your internet connection.
-- **Report a problem:** click **Issues → New issue** at the top of this page and describe what happened (a screenshot helps).
+- **Something looks wrong in a map:** see [How to report a problem](#how-to-report-a-problem) below.
+- **Anything else** (the game does not start, a question, an idea): click **Issues → New issue** at the top of this page. Please don't post your own address or your map's location there: issues are public.
 
 *Checksum (optional):* put the `.sha256` file next to the archive and run `sha256sum -c HomeRoute-*.tar.gz.sha256`; it should print "OK".
+
+## How to report a problem
+
+Found a spot that looks wrong (a hole, a wall in the way, a floating tree)? The game can pack it up for you, and you send it by email.
+
+1. **Mark the spot:** drive or walk there and press **M**. A box opens: type what you noticed (e.g. "car can't pass under the bridge") and press **Enter**. The game takes a screenshot. Mark as many spots as you like.
+2. **Make the feedback file:** press **Esc** → **Send feedback**.
+   - Tick the marks you want to send (all are ticked).
+   - **Include where this map is:** tick this box only if you agree. It lets the developer rebuild your map and fix the problem, but it also shows where your map is, which may be where you live (see [Privacy](#privacy)). Without it, the area and street names on the screenshots are blacked out, and the problem is harder to reproduce.
+   - Click **Create feedback file**. After a few seconds the file `HomeRoute-feedback-<date>.zip` is in your **Downloads** folder (usually under 1 MB per mark).
+3. **Send it:**
+   - Click **Open email program**: a new email to the developer opens with the subject filled in. (If nothing opens, click **Copy email address** and write to it from your usual email, e.g. in the browser.)
+   - Click **Open folder** and **drag the zip file into the email** (or use your email's "Attach" button).
+   - Send it. Thank you!
+
+Nothing is sent by the game itself. If you want to see what is inside, open the zip like any other folder: `feedback.json` (your marks and comments, the map recipe if you ticked the box, and your graphics card, driver and system), and the screenshots in `marks/`. It never contains your name, your user name or other files.
+
+## Privacy
+
+**Who receives your feedback:** Steffen Berg, developer of Home Route (a private, non-commercial project). Contact: mimiundmomotv@gmail.com.
+
+- **What:** only what is in the feedback file you email yourself: your comments and marks with screenshots, information about your computer (graphics card, driver, operating system, processor, memory), your email address (because you send an email), and, only if you ticked the box, where your map is (its area, which may show where you live).
+- **Why:** only to reproduce and fix the problems you reported. It is not passed on, published or used for anything else; locations are never written into the public code or its history.
+- **Legal basis:** your consent (Art. 6 (1) a GDPR), given by ticking the box and sending the email.
+- **How long:** deleted at the latest 6 months after the problem is fixed, or earlier when you ask.
+- **Your rights:** you can ask what is stored, have it corrected or deleted, and withdraw your consent at any time by writing to the address above. You can also complain to a data protection authority.
+- **Email:** the address is a Gmail address, so your email is processed by Google.
+- **What the game sends by itself:** nothing about you. When you search for a place under *New area*, the search text goes to OpenStreetMap's Nominatim service; creating an area downloads map data from the open-data servers of OpenStreetMap and the German states. Like any website, these see your IP address.
+
+
+### Datenschutz (Deutsch)
+
+**Wer dein Feedback erhält:** Steffen Berg, Entwickler von Home Route (privates, nicht-kommerzielles Projekt). Kontakt: mimiundmomotv@gmail.com.
+
+- **Was:** nur das, was in der Feedback-Datei steht, die du selbst per E-Mail schickst: deine Kommentare und Markierungen mit Screenshots, Angaben zu deinem Rechner (Grafikkarte, Treiber, Betriebssystem, Prozessor, Arbeitsspeicher), deine E-Mail-Adresse (weil du eine E-Mail schickst) und, nur wenn du den Haken gesetzt hast, wo deine Karte liegt (ihr Gebiet, das zeigen kann, wo du wohnst).
+- **Wozu:** nur, um die gemeldeten Fehler nachzustellen und zu beheben. Die Daten werden nicht weitergegeben, nicht veröffentlicht und für nichts anderes verwendet; Orte kommen nie in den öffentlichen Code oder seine Historie.
+- **Rechtsgrundlage:** deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), durch das Setzen des Hakens und das Absenden der E-Mail.
+- **Wie lange:** gelöscht spätestens 6 Monate, nachdem der Fehler behoben ist, oder früher auf deinen Wunsch.
+- **Deine Rechte:** Du kannst jederzeit über die Adresse oben Auskunft verlangen, Daten berichtigen oder löschen lassen und deine Einwilligung widerrufen. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren.
+- **E-Mail:** Die Adresse ist eine Gmail-Adresse, deine E-Mail wird also von Google verarbeitet.
+- **Was das Spiel selbst sendet:** nichts über dich. Suchst du unter *New area* nach einem Ort, geht der Suchtext an den Dienst Nominatim von OpenStreetMap; beim Erstellen eines Gebiets werden Kartendaten von den Open-Data-Servern von OpenStreetMap und der Bundesländer geladen. Wie jede Website sehen diese Server deine IP-Adresse.
 
 ---
 Licences: game code MIT, own assets CC BY-SA 4.0 / CC0. Map data © OpenStreetMap contributors (ODbL); geodata of the German states under their open licences (see Credits in the game). Built with Unreal Engine. This repository only holds the downloads.
