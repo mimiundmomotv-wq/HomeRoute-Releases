@@ -9,7 +9,7 @@ Drive and walk through real places, built on your PC from open map data.
 ## Installation, step by step
 
 ### What you need
-- A **Linux** PC (64-bit) with **Ubuntu 24.04** or newer, Debian 13, Fedora 39 or newer, or another current distribution. Windows and Mac are not supported yet.
+- A **Linux** PC (64-bit) with **Ubuntu 24.04** or newer, Debian 13, Fedora 39 or newer, or another current distribution. Windows and Mac are not supported yet. **No Linux?** See [Play from a USB stick](#no-linux-play-from-a-usb-stick).
 - A graphics card with a current driver (Vulkan). AMD and Intel graphics usually work out of the box on Ubuntu, Fedora etc. For NVIDIA, install the NVIDIA driver (Ubuntu: *Software & Updates → Additional Drivers*).
 - At least 16 GB of RAM, about 1 GB of free disk space for the game, plus a few GB for each area you build.
 - An internet connection for building new areas.
@@ -72,6 +72,23 @@ Drive and walk through real places, built on your PC from open map data.
 
 *Checksum (optional):* put the `.sha256` file next to the archive and run `sha256sum -c HomeRoute-*.tar.gz.sha256`; it should print "OK".
 
+## No Linux? Play from a USB stick
+
+For Windows PCs there is a **USB stick image** with Home Route already set up: you start the computer from the stick and play, nothing is installed. Windows and your files are not changed, and your maps, settings and marks are kept on the stick.
+
+**How to get it:** the image is about 4.5 GB, too big for this download page. You can **ask for it by email** (address under [Privacy](#privacy)). There is no guarantee that it can be provided; whether and how is settled by email.
+
+**What you need:** a USB stick with at least **32 GB** (everything on it is erased; USB 3 recommended), a 64-bit PC with 16 GB of RAM, best with AMD or Intel graphics (NVIDIA works, but slower).
+
+**In short:**
+1. Write the image to the stick with [Rufus](https://rufus.ie) (choose **"Write in DD Image mode"** when Rufus asks) or, on Linux, with `dd`.
+2. Plug the stick into the Windows PC. A drive **HOME ROUTE** appears: double-click **"Home Route starten"** and allow it when Windows asks.
+3. The PC restarts from the stick and Home Route opens. The next normal start is Windows again.
+
+**What "Home Route starten" changes on your PC:** it needs administrator rights because it sets a boot setting of the computer's firmware (UEFI). It reads the boot devices with `bcdedit /enum firmware` and sets the stick **once** as the next boot device: `bcdedit /set {fwbootmgr} bootsequence {id of the stick}`. This applies to the next start only and is cleared by the firmware afterwards; the normal boot order, Windows and your files stay as they are. If it does not find the stick, it changes nothing and restarts into Windows' startup options (`shutdown /r /o`), where you choose *Use a device* → the stick. You can undo it before restarting with `bcdedit /deletevalue {fwbootmgr} bootsequence`, and read both files (plain text) on the stick before running them. With BitLocker, Windows may in rare cases ask for the recovery key once afterwards. Without the double-click: start the PC from the stick through its boot menu (often F12).
+
+**Logs:** if something goes wrong, the stick writes what happened into the folder `Logs` on the HOME ROUTE drive (hardware, graphics card, the stick's partitions, the game's output; WLAN names and device addresses are left out). Nothing is sent anywhere; if you want help, send that folder.
+
 ## How to report a problem
 
 Found a spot that looks wrong (a hole, a wall in the way, a floating tree)? The game can pack it up for you, and you send it by email.
@@ -98,6 +115,7 @@ Nothing is sent by the game itself. If you want to see what is inside, open the 
 - **How long:** deleted at the latest 6 months after the problem is fixed, or earlier when you ask.
 - **Your rights:** you can ask what is stored, have it corrected or deleted, and withdraw your consent at any time by writing to the address above. You can also complain to a data protection authority.
 - **Email:** the address is a Gmail address, so your email is processed by Google.
+- **Asking for the USB stick image:** your email address and message are only used to answer your request, and deleted afterwards (legal basis: your request, Art. 6 (1) b GDPR). Logs you send from the stick are treated like feedback (above).
 - **What the game sends by itself:** nothing about you. When you search for a place under *New area*, the search text goes to OpenStreetMap's Nominatim service; creating an area downloads map data from the open-data servers of OpenStreetMap and the German states. Like any website, these see your IP address.
 
 
@@ -111,6 +129,7 @@ Nothing is sent by the game itself. If you want to see what is inside, open the 
 - **Wie lange:** gelöscht spätestens 6 Monate, nachdem der Fehler behoben ist, oder früher auf deinen Wunsch.
 - **Deine Rechte:** Du kannst jederzeit über die Adresse oben Auskunft verlangen, Daten berichtigen oder löschen lassen und deine Einwilligung widerrufen. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren.
 - **E-Mail:** Die Adresse ist eine Gmail-Adresse, deine E-Mail wird also von Google verarbeitet.
+- **USB-Stick-Abbild anfragen:** Deine E-Mail-Adresse und Nachricht werden nur genutzt, um deine Anfrage zu beantworten, und danach gelöscht (Rechtsgrundlage: deine Anfrage, Art. 6 Abs. 1 lit. b DSGVO). Protokolle vom Stick, die du schickst, werden wie Feedback behandelt (oben).
 - **Was das Spiel selbst sendet:** nichts über dich. Suchst du unter *New area* nach einem Ort, geht der Suchtext an den Dienst Nominatim von OpenStreetMap; beim Erstellen eines Gebiets werden Kartendaten von den Open-Data-Servern von OpenStreetMap und der Bundesländer geladen. Wie jede Website sehen diese Server deine IP-Adresse.
 
 ---
