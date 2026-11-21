@@ -74,7 +74,7 @@ Drive and walk through real places, built on your PC from open map data.
 
 ## No Linux? Play from a USB stick
 
-For Windows PCs there is a **USB stick image** with Home Route already set up: you start the computer from the stick and play, nothing is installed. Windows and your files are not changed, and your maps, settings and marks are kept on the stick.
+For **Windows PCs with an Intel or AMD processor** (64-bit; almost all desktop PCs and laptops) there is a **USB stick image** with Home Route already set up: you start the computer from the stick and play, nothing is installed. Windows and your files are not changed, and your maps, settings and marks are kept on the stick. It does not work on Windows laptops with an ARM processor (e.g. Qualcomm Snapdragon) or on Macs.
 
 **How to get it:** the image is about 4.5 GB, too big for this download page. You can **ask for it by email** (address under [Privacy](#privacy)). There is no guarantee that it can be provided; whether and how is settled by email.
 
