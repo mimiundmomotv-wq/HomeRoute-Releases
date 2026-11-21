@@ -39,7 +39,7 @@ Drive and walk through real places, built on your PC from open map data.
 
 ### 4. Play
 - **First time:** "Choose area" → "Starter Town" → **"Drive"**: a made-up village, playable at once.
-- **Build your own place:** "New area" → type a town or street → "Search" → click a result → choose the size → **"Create area"**. The data is downloaded and built, which takes a few minutes depending on the size. Works best in **North Rhine-Westphalia** (Germany); other German states as far as they publish open 3D building data.
+- **Build your own place:** "New area" → type a town or street → "Search" → click a result → choose the size → **"Create area"**. The data is downloaded and built, which takes a few minutes depending on the size. Works best in **North Rhine-Westphalia** and **Mecklenburg-Vorpommern** (Germany, including the Baltic coast); other German states as far as they publish open 3D building data.
 - **Choppy?** Choose **Low** in "Settings".
 
 **Keys**
@@ -54,7 +54,7 @@ Drive and walk through real places, built on your PC from open map data.
 | C | Call the car to you |
 | R | Reset the car |
 | H | Back to the start |
-| Tab | Map: click a place or search a street to jump there |
+| Tab | Map: mouse wheel zooms, right-drag moves, point at a street for its name; click a place or search a street to jump there |
 | V | Fly (F lands you on foot again) |
 | M | Mark a spot with a comment (for bug reports) |
 | Esc | Menu |
